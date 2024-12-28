@@ -1,0 +1,8 @@
+body, html {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    // стандартный шрифт равен 16, чтобы его использовать как стартовую единицу измерения для rem
+    font-size: 16px;
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,8 @@
+:root {
+    --container-max-width: 0px;
+    // все величины отступов стого в формате rem, где  1rem = 16px
+    --margin-y: 0px;
+    --margin-x: calc(var(var(--margin-y) / 1.618));
+    --padding-default: 0px 0px; 
+    // сдесь будут зарезервированны глобальные переменные для цветовой палитры сайта в формате Tailwind
+}

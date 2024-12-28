@@ -1,0 +1,45 @@
+// максимальная ширина кнопки: 
+$btn-max-width: 0px;
+// минимальная высота кнопки: 
+$btn-min-height: 0px;
+// радиус закругления кнопки в пикселях:
+$btn-corner: 0px;
+
+
+@mixin visually-hidden {
+ position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+@mixin transition {
+    transition: all 30ms ease;
+}
+@mixin btn {
+   max-width: $btn-max-width;
+   min-height: $btn-min-height;
+   padding: 0.625rem 1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   text-wrap: nowrap;
+   border: none;
+   color: inherit;
+   font-size: 18px;
+   line-height: calc(27 / 18 * 100%);
+   font-weight: 400;
+   letter-spacing: 0;
+   background-color: inherit;
+   border-radius: $btn-corner;
+   @include transition();
+   @include hover {
+     color: inherit;
+   }
+}

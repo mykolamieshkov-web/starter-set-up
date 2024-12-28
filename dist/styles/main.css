@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/* Обнуление стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  text-decoration: unset;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  all: initial;
+}
+
+nav {
+  display: flex;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+:root {
+  --container-max-width: 0px;
+  --margin-y: 0px;
+  --margin-x: calc(var(var(--margin-y) / 1.618));
+  --padding-default: 0px 0px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.btn {
+  max-width: 0px;
+  min-height: 0px;
+  padding: 0.625rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-wrap: nowrap;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0;
+  background-color: inherit;
+  border-radius: 0px;
+  transition: all 30ms ease;
+}
+
+.btn .container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 0.83rem;
+}
+
+.bg {
+  position: absolute;
+  /* Чтобы изображение было фоном */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Изображение на заднем плане */
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Делаем изображение полностью покрывающим блок */
+  object-position: top;
+  /* Центрируем изображение */
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1200px) {
+  .btn .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn .container {
+    max-width: none;
+  }
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    color: inherit;
+  }
+}
+
+@media (hover: none) {
+  .btn:active {
+    color: inherit;
+  }
+}
+/*# sourceMappingURL=maps/main.css.map */

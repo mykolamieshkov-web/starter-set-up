@@ -1,0 +1,89 @@
+
+/* Обнуление стилей */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+ 
+  
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+  }
+  
+  :focus,
+  :active {
+    outline: none;
+  }
+  
+ a {
+   text-decoration: unset;
+   color: inherit;
+   a:active, a:hover {
+    outline-width: 0; /* Устраняет рамки при клике или наведении */
+}
+
+ }
+ img {
+   max-width: 100%;
+   border-style: none; /* Устраняет рамки вокруг изображений */
+  
+ }
+ 
+ button {
+   all: initial;
+ }
+ nav {
+   display: flex;
+ }
+ li, ul {
+  list-style: none;
+ }
+//  ----------------------
+// Работа с полями ввода:
+
+input, select, textarea {
+  font: inherit; /* Наследует шрифты от родительского элемента */
+  overflow: visible;
+  margin: 0; /* Устраняет отступы, чтобы предотвратить перекосы */
+}
+fieldset {
+  border: 1px solid #c0c0c0; /* Обнуляет внешний вид полей */
+  margin: 0 2px; /* Устанавливает минимальные отступы */
+  padding: 0.35em 0.625em 0.75em; /* Согласованный внутренний отступ */
+}
+
+legend {
+  color: inherit; /* Унаследует цвет текста */
+  padding: 0; /* Устраняет стандартные отступы */
+}
+
+textarea {
+  overflow: auto; /* Обеспечивает прокрутку, если текст выходит за пределы области */
+}
+
+[type=checkbox], [type=radio] {
+  padding: 0; /* Устраняет дефолтное смещение */
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto; /* Делает спин-боксы более консистентными */
+}
+
+[type=search] {
+  --webkit-appearance: textfield; /* Устраняет стили поиска в Safari */
+  outline-offset: -2px; /* Корректирует смещение рамки */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Убирает иконку поиска */
+}
+
+::-webkit-file-upload-button {
+  --webkit-appearance: button; /* Обнуляет стиль для загрузки файлов */
+  font: inherit; /* Наследует шрифт для консистентности */
+}
